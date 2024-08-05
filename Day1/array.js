@@ -165,4 +165,27 @@ index != -1 ? console.log("Found at index " + index) : console.log("Not found");
 
 // let us check if a avocado exist in the array
 
-let indexOfAvocado = 
+let indexOfAvocado = fruits.indexOf('mango');
+if (indexOfAvocado != -1){
+    console.log("In the array " + index);
+
+} else {
+    console.log("Not in the array");
+}
+
+// joining array elements
+
+const number1 = [1,2,3,4,5];
+console.log(number1.join());
+
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
+console.log(names.join());
+console.log(names.join('/'));
+console.log(names.join(" / * "));
+
+console.log(number1);
+console.log(number1.splice());
+console.log(number1.splice(0,1));
+console.log(number1.splice(2,0,"3"))
+
+//
