@@ -228,4 +228,80 @@ console.log(webTechs1[middleIndex]);
 console.log(firstWebTechs1);
 console.log(lastWebTechs1);
 
+let firstCountries = countries1[0];
+let lastCountries = countries1.pop();
+const middleCoun = Math.floor(countries1.length /2);
 
+console.log(firstCountries);
+console.log(lastCountries);
+console.log(countries1[middleCoun]);
+
+
+// 5. Declare an array called mixedDataTypes, 
+//put different data types in the array and 
+//find the length of the array. 
+//The array size should be greater than 5
+
+// const arr = [
+//   "Asabenh",
+//   250,
+//   true,
+//   { country: "Finland", city: "Helsinki" },
+//   { skill: ["HTML", "CSS", "JS"] },
+// ];
+
+
+const mixedDataTypes = [
+  "Long",
+  "20",
+  "VietNam",
+  true,
+  250,
+  { country: "VietNam", city: "HoChiMinh" },
+]
+
+console.log(mixedDataTypes);
+console.log(mixedDataTypes.length);
+
+// 6. Declare an array variable name itCompanies and assign initial values
+// Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+
+const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM","Oracle", "Amazon"];
+console.log(itCompanies);
+
+// 8. Print the array using console.log()
+console.log(itCompanies.length);
+
+
+// 9. Print the first company, middle and last company
+console.log(itCompanies[0]);
+
+let midC = Math.floor(itCompanies.length / 2);
+
+console.log(itCompanies[midC]);
+
+let lastCom = itCompanies.length - 1;
+console.log(itCompanies[lastCom]);
+
+// 10.  Print out each company
+console.log("--------------");
+console.log("Company");
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
+console.log(itCompanies[4]);
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
+
+// 16. Change each company name
+// to uppercase one by one and print them out
+itCompanies.reverse();
+console.log(itCompanies);
+
+
+// 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, 
+//IBM,Oracle and Amazon are big IT companies. 
+
+let sentence = itCompanies.slice(0, -1).join(',') + ', and' + itCompanies.slice(-1) + 'are big IT company';
+console.log(sentence);
