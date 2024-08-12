@@ -1,36 +1,69 @@
 import React from "react";
 import ReactDom from "react-dom";
-import firstImg from "./images/html.png";
+import jackImage from './images/jack.png';
 
-const title = "Front End Technologies";
 
-/* const logo = (
-  <div>
-    <img src={firstImg} alt="Logo" />
-  </div>
-) */
 
-const main = (
-  <div className="main-wrapper">
-    <h1>{title}</h1>
-    <div className="images">
-      <img src={firstImg} alt="HTML" />
-      <img src={firstImg} alt="HTML" />
-      <img src={firstImg} alt="HTML" />
+// Header Component
+const Header = () => (
+  <header>
+    <div className="header-wrapper">
+      <h1>
+        Welcome to 30 Day of React
+      </h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript</h3>
+      <p>Longngow</p>
+      <small>Oct 3, 2020</small>
     </div>
+  </header>
+)
 
-    <h1>SUBSCRIBE</h1>
-    <p>Sign up with your email address to receive news and updates.</p>
-    <div className="form">
-      <input className="input" type="text" placeholder="First Name" />
-      <input className="input" type="text" placeholder="Last Name" />
-      <input className="input" type="text" placeholder="Email" />
-    </div>
-
-    <button className="btn">Submit</button>
-
+// UserCard Component
+const UserCard = () => (
+  <div className="user-card">
+    <img src={jackImage} />
+    <h2>Jack j97</h2>
   </div>
-);
+)
+
+const TechList = () => {
+  const techs = ["React", "Angular", "Vue"];
+  const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+  return techsFormatted
+}
+
+// Main component
+
+const Main = () => (
+  <main>
+    <div className="main-wrapper">
+      <p>Component React JS</p>
+      <ul>
+        <TechList />
+      </ul>
+      <UserCard/>
+    </div>
+  </main>
+)
+
+const Footer = () =>(
+  <footer>
+    <div className="footer-wrapper">
+      <p>Copyright by Longngow</p>
+    </div>
+  </footer>
+)
+
+const App = () => (
+  <div className="app">
+    <Header />
+    <Main />
+    <Footer/>
+  </div>
+)
+
+
 
 const rootElement = document.getElementById("root");
-ReactDom.render(main, rootElement);
+ReactDom.render(<App/>, rootElement);

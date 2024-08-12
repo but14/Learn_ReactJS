@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,18 +11,20 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
     <title>30 Days Of React App</title>
     <style>
-      /* General style */
-
-      *{
+    
+      /* == General style === */
+      
+      * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
       }
 
       html,
-      body{
+      body {
         height: 100%;
         line-height: 1.5;
         font-family: 'Montserrat';
@@ -31,64 +32,78 @@
         color: black;
       }
 
-      .root{
+      .root {
         min-height: 100%;
         position: relative;
       }
 
-      h1{
+      .header-wrapper,
+      .main-wrapper,
+      .footer-wrapper {
+        width: 85%;
+        margin: auto;
+      }
+
+      .header-wrapper,
+      .main-wrapper {
+        padding: 10px;
+        margin: 2px auto;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+
+      header {
+        background-color: #61dbfb;
+        padding: 25;
+        padding: 10px;
+      }
+
+      main {
+        padding: 10px;
+        padding-bottom: 60px;
+        /* Height of the footer */
+      }
+
+      ul {
+        margin-left: 15px;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #6cf;
+      }
+
+      .footer-wrapper {
+        font-weight: 400;
         text-align: center;
-        margin-top: 20px;
+        line-height: 60px;
       }
-
-      img{
-        width: 20%;
-        height: 20%;
-        
+      .user-card {
+        margin-top: 10px;
       }
-
-      .images{
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+      .user-card > img {
+        border-radius: 50%;
+        width: 14%;
       }
-
-      p{
-        text-align: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 18px;
-      }
-
-      .form{
-        display: flex;
-        justify-content: center;
-      }
-
-      .form .input{
-        padding: 8px;
-        margin: 6px;
-        border-radius: 5%;
-      }
-
-      .btn{
-        
-        background: brown;
-        padding: 5px;
-        width: 200px;
-        border-radius: 5%;
-        border-style: double;
-        color: bisque;
-        font-size: 20px;
-      }
-
-      .main-wrapper{
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
-      }
-
+      
     </style>
+    
   </head>
   <body>
     <div id="root"></div>
