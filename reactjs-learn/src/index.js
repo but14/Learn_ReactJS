@@ -1,96 +1,36 @@
 import React from "react";
 import ReactDom from "react-dom";
+import firstImg from "./images/html.png";
 
-// JSX element, header
+const title = "Front End Technologies";
 
-const welcome = "Welcome to 30 Days Of react";
-const title = "Getting started React";
-const subtitle = "JavaScript Libraby";
-const author = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
-};
-const date = "Aug 08, 2024";
+/* const logo = (
+  <div>
+    <img src={firstImg} alt="Logo" />
+  </div>
+) */
 
-// Jsx element, header
-
-const header = (
-  <header>
-    <div className="header-wrapper">
-      <h1>{welcome}</h1>
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>
-        Instructor: {author.firstName} {author.lastName};
-      </p>
-      <small>Date: {date}</small>
-    </div>
-  </header>
-);
-
-const numOne = 3;
-
-const numTwo = 2;
-
-const result = (
-  <p>
-    {numOne} + {numTwo} = {numOne + numTwo}
-  </p>
-);
-
-const yearBorn = 1820;
-const currentYear = new Date().getFullYear();
-const age = currentYear - yearBorn;
-
-const personAge = (
-  <p>
-    {" "}
-    {author.firstName} {author.lastName} is {age} years old.
-  </p>
-);
-
-// JSX main
-
-const techs = ["HTML", "CSS", "Javascript"];
-const techsFormatted = techs.map((techs) => <li>{techs}</li>);
-
-// JSX element, main
 const main = (
-  <main>
-    <div className="main-wrapper">
-      <p>
-        Prerequisite to get started{""}
-        <strong>
-          <em>React. js</em>
-        </strong>
-        :
-      </p>
-      <ul>{techsFormatted}</ul>
-      {result}
-      {personAge}
+  <div className="main-wrapper">
+    <h1>{title}</h1>
+    <div className="images">
+      <img src={firstImg} alt="HTML" />
+      <img src={firstImg} alt="HTML" />
+      <img src={firstImg} alt="HTML" />
     </div>
-  </main>
-);
 
-const copyRight = "Copyright 2020";
-
-// JSX element, footer
-
-const footer = (
-  <footer>
-    <div className="footer-wrapper">
-      <p>{copyRight}</p>
+    <h1>SUBSCRIBE</h1>
+    <p>Sign up with your email address to receive news and updates.</p>
+    <div className="form">
+      <input className="input" type="text" placeholder="First Name" />
+      <input className="input" type="text" placeholder="Last Name" />
+      <input className="input" type="text" placeholder="Email" />
     </div>
-  </footer>
-);
 
-const app = (
-  <div className="app">
-    {header}
-    {main}
-    {footer}
+    <button className="btn">Submit</button>
+
   </div>
 );
 
 const rootElement = document.getElementById("root");
-ReactDom.render(app, rootElement); // render the JSX element to the DOM
+ReactDom.render(main, rootElement);
